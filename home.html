@@ -4,7 +4,7 @@
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
 
@@ -17,37 +17,10 @@
     padding: 10px;
 }
 
-.heading1 {
-    font-family: "Roboto";
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.para1 {
-    font-family: "Roboto";
-    font-size: 12px;
-}
-
 .cardmargin {
     margin: 15px;
 }
 
-.heading2 {
-    font-family: "Roboto";
-    font-size: 25px;
-    font-weight: bold;
-}
-
-.para2 {
-    font-family: "Roboto";
-    font-size: 10px;
-}
-
-.details1 {
-    text-align: center;
-    padding: 10px;
-    margin: 10px;
-}
 
 .heading3 {
     font-family: "Roboto";
@@ -60,9 +33,6 @@
     font-size: 10px;
 }
 
-.details2 {
-    padding: 10px;
-}
 
 .heading4 {
     font-family: "Roboto";
@@ -75,42 +45,306 @@
     font-size: 10px;
 }
 
-.image3 {
-    height: 15px;
-}
-
 .space {
     padding-left: 10px;
 }
 
-.cardholder{
-    background-color: aqua;
-    border-radius: 20px;
-    height: 400px;
-    padding-top: 50px;
-}
-
-
-.footer_bg{
-    background-color: #0d2436;
-}
 
 .footer_textcolor{
     color: aliceblue;
 }
 
-.emailbox{
-    margin-left: 10px;
+
+
+
+
+.background_color{
+    background-image: url("https://res.cloudinary.com/dmnys8vsr/image/upload/v1702636164/main_qxlc1d.webp");
+    background-size: cover;
+    height: 100vh;
 }
 
+.profile_image{
+    height: 30px;
+    margin-top: 6px;
+}
+
+.details_card{
+    background-color: white;
+}
+
+.footer_logo{
+    height: 200px;
+    border-radius: 20px;
+    margin: 15px;
+}
+
+.header_logo{
+    height: 30px;
+    margin-top: 5px;
+}
+
+
+/* Navbar */
+.navbar {
+            background: whitesmoke;
+            transition: background 0.3s ease-in-out;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            color: black !important;
+        }
+        .nav-link {
+            color: black !important;
+            transition: 0.3s;
+        }
+        .nav-link:hover {
+            color: grey !important;
+        }
+
+
+/* hero section*/
+.hero {
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .heading1 {
+            opacity: 0;
+            animation: slideIn 1s ease-out 0.5s forwards;
+            color: white;
+            font-family: "Roboto";
+            font-size: 90px;
+            font-weight: bold;
+        }
+
+        .para1 {
+            opacity: 0;
+            animation: slideIn 1s ease-out 0.7s forwards;
+            color: white;
+    font-family: "Roboto";
+    font-size: 25px;
+        }
+
+        .get_started_btn{
+    margin-left: 20px;
+}
+
+        .get_started_btn, .btn-primary {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .get_started_btn:hover, .btn-primary:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+/* learn more btn*/
+        #learnmore {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .heading2 {
+            opacity: 0;
+            transform: translateX(-30px);
+            animation: slideIn 0.8s ease-out forwards;
+            font-family: "Roboto";
+    font-size: 25px;
+    font-weight: bold;
+}
+        
+
+        .para2 {
+            opacity: 0;
+            animation: fadeIn 0.6s ease-out 0.3s forwards;
+            font-family: "Roboto";
+    font-size: 15px;
+        }
+
+        .para2:hover {
+            transform: scale(1.05);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .collapse.show {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+/* features of project*/
+
+.details1 {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out forwards;
+            background-color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+        }
+
+        .details1:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .details1:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .details1:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        /* Hover effect - scale up and shadow glow */
+        .details1:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 0px 10px 20px rgba(0, 123, 255, 0.3);
+        }
+
+        /* Keyframe animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+/*footer*/
+
+.footer_bg {
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease-out forwards;
+            background-color: #021d3a;
+        }
+
+        /* Slide-in effect for each section */
+        .details2 {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideIn 0.8s ease-out forwards;
+            padding: 10px;
+    margin-top: 15px;
+        }
+
+        .details2:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .details2:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .details2:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .details2:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        /* Hover effects for links */
+        .para4:hover {
+            color: grey;
+            transition: color 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        /* Social media icons hover effect */
+        .image3 {
+            transition: transform 0.3s ease-in-out;
+            height: 15px;
+        }
+
+        .image3:hover {
+            transform: scale(1.2);
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
     </style>
 </head>
 
-<body>
+<body class="background_color">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">
+                <img src="https://res.cloudinary.com/dmnys8vsr/image/upload/v1739197397/WhatsApp_Image_2025-02-10_at_19.20.02_b7c6b8fc_uwa7n7.jpg" class="header_logo" />
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -118,93 +352,83 @@
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="#">Home Page</a>
                     <a class="nav-link" href="#">About Us</a>
-                    <a class="nav-link" href="#">Services</a>
-                </div>
-                <div>
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Contact Us
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <a class="nav-link" href="#">Contact Us</a>
                 </div>
                 <div class="navbar-nav ms-auto">
                     <a class="nav-link" href="#">Login</a>
                     <a class="nav-link" href="#">Sign Up</a>
+                    <img src="https://res.cloudinary.com/dmnys8vsr/image/upload/v1739192826/WhatsApp_Image_2025-02-10_at_18.36.25_231538bb_rblcbb.jpg" class="profile_image"/>
                 </div>
             </div>
         </div>
     </nav>
-    <div class="d-flex flex-row justify-content-center cardmargin cardholder">
+    <div class="d-flex flex-row justify-content-center cardmargin mt-5 mb-5 hero">
         <div class="details2">
-            <h1 class="heading1">Streamlining Hospital<br>Monitoring for Better<br>HealthCare</h1>
-            <p class="para1">Our platform connects hospitals to the centralized grid, enabling real-time<br>monitoring of resources and data. This empowers health department<br>employees to respond swiftly to emergencies and optimze healthcare<br>delivery.</p>
-            <button>Learn More</button>
-            <button>Sign Up</button>
-        </div>
-        <div class="details2">
-            <img src="https://res.cloudinary.com/dmnys8vsr/image/upload/v1738602429/DALL_E_2025-02-03_22.36.44_-_A_calming_and_serene_background_image_for_a_hospital_website._The_scene_features_a_modern_hospital_reception_area_with_soft_natural_lighting_pastel_b_zelagf.webp" class="image1" />
-        </div>
-    </div>
-    <div class="d-flex flex-row justify-content-center cardmargin ">
-        <div class="details1 shadow">
-            <img src="https://res.cloudinary.com/dmnys8vsr/image/upload/v1738601495/mail_24dp_5F6368_FILL0_wght400_GRAD0_opsz24_ab82yj.png" class="image2" />
-            <h1 class="heading2">Email</h1>
-            <p class="para2">For any enquires, please reach out to us directly.</p>
-            <p class="para2">mediloom.io@gmail.com</p>
-        </div>
-        <div class="details1 shadow">
-            <img src="https://res.cloudinary.com/dmnys8vsr/image/upload/v1738602304/call_24dp_5F6368_FILL0_wght400_GRAD0_opsz24_herxow.png" class="image2" />
-            <h1 class="heading2">Phone</h1>
-            <p class="para2">We're here to assist you with any questions.</p>
-            <p class="para2">+91 00000 00000</p>
-        </div>
-        <div class="details1 shadow">
-            <img src="https://res.cloudinary.com/dmnys8vsr/image/upload/v1738602304/location_on_24dp_5F6368_FILL0_wght400_GRAD0_opsz24_ge6l6v.png" class="image2" />
-            <h1 class="heading2">Office</h1>
-            <p class="para2">Visit us at our headquaters for more information.</p>
-            <p class="para2">Hyderabad</p>
-        </div>
-    </div>
-    <div class="d-flex flex-row justify-content-between cardmargin ">
-        <div class="details2">
-            <h1 class="heading3">Subscribe to updates</h1>
-            <p class="para3">Stay informed with the latest news and updates.</p>
-        </div>
-        <div class="details2">
-            <div class="d-flex flex-row">
-                <input type="text" placeholder="Type your email" class="form-control">
-                <button class="btn btn-primary emailbox">join</button>
+            <h1 class="heading1">Transforming healthcare with<br>Real-time Intelligence.</h1>
+            <p class="para1">An integrated healthcare management grid for centralized patient data,<br> hospital resource tracking, and predictive analytics.</p>
+            <div style="text-align: center;">
+                <button class="btn btn-primary mt-3" data-bs-toggle="collapse" data-bs-target="#learnmore">Learn More</button>
+                <button class="btn btn-primary mt-3 get_started_btn">Get Started</button>
             </div>
-            <p class="para3">By Subscribing, you accept our private policy.</p>
+        </div>
+    </div>
+    <div class="cardmargin mt-5 mb-5">
+        <div class="collapse mt-3 p-3 bg-light text-dark rounded" id="learnmore">
+            <div class="d-flex flex-row justify-content-around">
+                <div>
+                    <h1 class="heading2">Key Features (Why Mediloom.io?)</h1>
+                    <ul>
+                        <li class="para2">Real-time Resource Tracking (Beds, equipment, personnel, etc.)</li>
+                        <li class="para2">Centralized Patient Data (Secure and accessible electronic health records)</li>
+                        <li class="para2">Predictive Analytics (AI-driven forecasts for patient inflow, drug demand, etc.)</li>
+                        <li class="para2">Emergency Response Coordination (Faster decision-making during crises)</li>
+                        <li class="para2">Secure & Scalable (Data privacy, encryption, and cloud scalability)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1 class="heading2">How It Works? (Step-by-Step Guide)</h1>
+                    <ul>
+                        <li class="para2">Step 1: Hospitals & healthcare centers register on Mediloom.io</li>
+                        <li class="para2">Step 2: Patient & resource data is securely centralized</li>
+                        <li class="para2">Step 3: AI-powered analytics provide real-time insights</li>
+                        <li class="para2">Step 4: Administrators optimize decision-making & coordination</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex flex-row justify-content-around cardmargin">
+        <div class="details1">
+            <h1 class="heading2">Real-Time Resource<br>Tracking</h1>
+            <p class="para2">Monitor hospital resources like beds, equipment, and personnel.</p>
+        </div>
+        <div class="details1">
+            <h1 class="heading2">Centralized Patient Data</h1>
+            <p class="para2">Secure access to medical records across healthcare facilities.</p>
+        </div>
+        <div class="details1">
+            <h1 class="heading2">Predictive Analytics</h1>
+            <p class="para2">AI-driven forecasts for patient inflow and drug demand.</p>
         </div>
     </div>
     <div class="footer_bg">
-        <div class="d-flex flex-row justify-content-between cardmargin">
+        <hr style="height:3px;border-width:0;color:white;background-color:white">
+        <div class="d-flex flex-row justify-content-around cardmargin">
             <div>
-                <p class="footer_textcolor">logo</p>
+                <img src="https://res.cloudinary.com/dmnys8vsr/image/upload/v1739197860/WhatsApp_Image_2025-02-10_at_19.20.02_f26967f0_v3feig.jpg" class="footer_logo" />
             </div>
             <div class="details2">
                 <h1 class="heading4 footer_textcolor">Quick Links</h1>
+                <p class="para4 footer_textcolor">Home</p>
+                <p class="para4 footer_textcolor">Features</p>
                 <p class="para4 footer_textcolor">About Us</p>
                 <p class="para4 footer_textcolor">Contact Us</p>
-                <p class="para4 footer_textcolor">Support Center</p>
-                <p class="para4 footer_textcolor">Careers</p>
-                <p class="para4 footer_textcolor">Blog</p>
             </div>
             <div class="details2">
-                <h1 class="heading4 footer_textcolor">Resources</h1>
-                <p class="para4 footer_textcolor">Help Center</p>
-                <p class="para4 footer_textcolor">FAQ's</p>
-                <p class="para4 footer_textcolor">User Guide</p>
-                <p class="para4 footer_textcolor">Community Forum</p>
-                <p class="para4 footer_textcolor">Feedback</p>
+                <h1 class="heading4 footer_textcolor">Support</h1>
+                <p class="para4 footer_textcolor">Email: <a>support@mediloom.com</a></p>
+                <p class="para4 footer_textcolor">Phone No: +91 00000 00000</p>
+                <p class="para4 footer_textcolor">Address: 123, HealthCare Avenue<br>Hyderabad, 501510</p>
             </div>
             <div class="details2">
                 <h1 class="heading4 footer_textcolor">Follow Us</h1>
@@ -214,27 +438,12 @@
                 <p class="para4 footer_textcolor">Instagram</p>
                 <p class="para4 footer_textcolor">Youtube</p>
             </div>
-            <div class="details2">
-                <h1 class="heading4 footer_textcolor">Legal</h1>
-                <p class="para4 footer_textcolor">Privacy Policy</p>
-                <p class="para4 footer_textcolor">Terms of Service</p>
-                <p class="para4 footer_textcolor">Cookie Settings</p>
-                <p class="para4 footer_textcolor">Company</p>
-                <p class="para4 footer_textcolor">Our Mission</p>
-            </div>
-            <div class="details2">
-                <h1 class="heading4 footer_textcolor">Contact</h1>
-                <p class="para4 footer_textcolor">Get in Touch</p>
-                <p class="para4 footer_textcolor">Join Our Team</p>
-                <p class="para4 footer_textcolor">Latest News</p>
-                <p class="para4 footer_textcolor">Subscribe Now</p>
-                <p class="para4 footer_textcolor">Stay Updated</p>
-            </div>
         </div>
+        <hr style="height:2px;border-width:0;color:gray;background-color:gray">
         <div class="d-flex flex-row justify-content-between cardmargin">
             <div class="d-flex flex-row">
                 <img src="https://res.cloudinary.com/dmnys8vsr/image/upload/v1738750934/icons8-copyright-24_vjvqri.png" class="image3 footer_textcolor" />
-                <p class="para4 footer_textcolor">2025 Health Connect. All Rights Reserved.</p>
+                <p class="para4 footer_textcolor">2025 Mediloom.io . All Rights Reserved.</p>
                 <p class="para4 space footer_textcolor">Privacy Policy</p>
                 <p class="para4 space footer_textcolor">Terms of Service</p>
                 <p class="para4 space footer_textcolor">Cookie Setting</p>

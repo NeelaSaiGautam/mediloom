@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+.cardmargin {
+    margin: 15px;
+}
+
+.footer_fix {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+
+.heading4 {
+    font-family: "Roboto";
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.para4 {
+    font-family: "Roboto";
+    font-size: 10px;
+}
+
+
+.footer_textcolor{
+    color: aliceblue;
+}
+
+
+
+
+
+.background_color{
+    background-image: url("https://res.cloudinary.com/dmnys8vsr/image/upload/v1702636164/main_qxlc1d.webp");
+    background-size: cover;
+    height: 100vh;
+}
+
+.profile_image{
+    height: 30px;
+    margin-top: 6px;
+}
+
+.footer_logo{
+    height: 200px;
+    border-radius: 20px;
+    margin: 15px;
+}
+
+.header_logo{
+    height: 30px;
+    margin-top: 5px;
+}
+
+
+/* Navbar */
+.navbar {
+            background: whitesmoke;
+            transition: background 0.3s ease-in-out;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            color: black !important;
+        }
+        .nav-link {
+            color: black !important;
+            transition: 0.3s;
+        }
+        .nav-link:hover {
+            color: grey !important;
+        }
+
+/*footer*/
+
+.footer_bg {
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease-out forwards;
+            background-color: #021d3a;
+        }
+
+        /* Slide-in effect for each section */
+        .details2 {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideIn 0.8s ease-out forwards;
+            padding: 10px;
+    margin-top: 15px;
+        }
+
+        .details2:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .details2:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .details2:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .details2:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        /* Hover effects for links */
+        .para4:hover {
+            color: grey;
+            transition: color 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        /* Social media icons hover effect */
+        .image3 {
+            transition: transform 0.3s ease-in-out;
+            height: 15px;
+        }
+
+        .image3:hover {
+            transform: scale(1.2);
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /*form container */
+        .container_form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border-radius: 10px;
+            /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+        }
+        .hidden {
+            display: none;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .form-section {
+            margin-top: 20px;
+            width: 100%;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 300px;
+        }
+        input, select {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .filter-section {
+            text-align: center;
+        }
+        .data-section {
+            margin-top: 20px;
+            width: 100%;
+        }
+        .document {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-top: 5px;
+            background: #fff;
+        }
+        .download {
+            cursor: pointer;
+            color: blue;
+        }
+
+
+
+        /*background card*/
+        .card {
+            width: 95%;
+            height: 100%;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            transition: box-shadow 0.5s ease-in-out;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 40px;
+        }
+
+
+        /* styling content*/
+        .heading_wlc{
+            font-family: "Roboto";
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .heading_name{
+            font-family: "Roboto";
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .para{
+            font-family: "Roboto";
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .details{
+            font-family: "Roboto";
+            color: white;
+        }
+
+        .heading_process{
+            font-family: "Roboto";
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .image1{
+            padding-left: 150px;
+            padding-right: 150px;
+            height: 200px;
+            width: 550px;
+        }
+
+        .image2{
+            padding-left: 150px;
+            padding-right: 150px;
+            height: 250px;
+            width: 550px;
+        }
+
+        .form{
+            color: white;
+            font-family: "Roboto";
+        }
+
+    </style>
+</head>
+
+<body class="background_color">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://res.cloudinary.com/dmnys8vsr/image/upload/v1739197397/WhatsApp_Image_2025-02-10_at_19.20.02_b7c6b8fc_uwa7n7.jpg" class="header_logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">Home Page</a>
+                    <a class="nav-link" href="#">About Us</a>
+                    <a class="nav-link" href="#">Contact Us</a>
+                </div>
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="#">Log Out</a>
+                    <img src="https://res.cloudinary.com/dmnys8vsr/image/upload/v1739192826/WhatsApp_Image_2025-02-10_at_18.36.25_231538bb_rblcbb.jpg" class="profile_image"/>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex flex-column justify-content-center">
+                    <h1 class="heading_wlc">Welcome to Mediloom.io</h1>
+                    <h1 class="heading_name">DOCTOR NAME</h1>
+                    <p class="para">Empower your practice, enhance patient care withease.</p>
+                </div>
+                <div class="container_form">
+                    <div class="buttons">
+                        <button onclick="toggleForm('retrieveForm')">Retrieve EHR</button>
+                        <button onclick="toggleForm('uploadForm')">Upload EHR</button>
+                    </div>
+                    
+                    <div id="retrieveForm" class="form-section hidden card">
+                        <div class="container_form">
+                            <form onsubmit="return validateOTP(event)">
+                                <label class="form">Patient ID: <input type="text" required class="form-control"></label>
+                                <label class="form">Patient Name: <input type="text" required class="form-control"></label>
+                                <label class="form">OTP (6-digit): <input type="text" id="otpField" required pattern="\d{6}" class="form-control"></label>
+                                <button onclick="validateOTP()">Retrieve</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div id="uploadForm" class="form-section hidden card">
+                        <div class="container_form">
+                            <form>
+                                <label class="form">Hospital ID: <input type="text" required class="form-control"></label>
+                                <label class="form">Patient ID: <input type="text" required class="form-control"></label>
+                                <label class="form">Patient Name: <input type="text" required class="form-control"></label>
+                                <label class="form">Department: <input type="text" required class="form-control"></label>
+                                <label class="form">Prescription: <input type="file" required class="form-control"></label>
+                                <label class="form">Doctor Name: <input type="text" required class="form-control"></label>
+                                <label class="form">Test Results: <input type="file" multiple class="form-control"></label>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+            
+                    <div id="dataRetrievalSection" class="hidden card">
+                        <div class="filter-section">
+                            <label class="form">Date: <input type="date" id="filterDate" class="form-control"></label><br><br>
+                            <label class="form">Hospital:
+                                <select id="filterHospital" class="form-control">
+                                    <option value="">All</option>
+                                    <option value="Hospital A">Hospital A</option>
+                                    <option value="Hospital B">Hospital B</option>
+                                    <option value="Hospital C">Hospital C</option>
+                                </select>
+                            </label>
+                            <br><br>
+                            <button onclick="applyFilters()">Apply Filters</button>
+                        </div>
+                        
+                        <div class="data-section" id="dataList">
+                            <div class="document" data-date="2025-02-20" data-hospital="Hospital A">
+                                Document 1 - Hospital A
+                                <span class="download" onclick="downloadFile('document1.pdf')">⬇</span>
+                            </div>
+                            <div class="document" data-date="2025-02-21" data-hospital="Hospital B">
+                                Document 2 - Hospital B
+                                <span class="download" onclick="downloadFile('document2.pdf')">⬇</span>
+                            </div>
+                            <div class="document" data-date="2025-02-22" data-hospital="Hospital C">
+                                Document 3 - Hospital C
+                                <span class="download" onclick="downloadFile('document3.pdf')">⬇</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <h1 class="heading_process">Process for patient treatment</h1>
+            </div>
+            <div class="row mt-3">
+                <div class="col-lg-6 col-md-12">
+                    <p class="details">When a patient visits the hospital for treatment, the doctor first asks for their Patient ID and name to retrieve their medical history. To ensure security and privacy, the system generates a One-Time Password (OTP) and sends it to the patient's registered contact. The patient must provide this OTP to the doctor, who then enters it into the system to verify access. Once authenticated, the doctor can securely review the patient's previous health records, including past diagnoses, prescriptions, and test results, enabling informed and efficient medical decisions.<p>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <img src="https://res.cloudinary.com/dmnys8vsr/image/upload/v1740216356/tzwwjrohkobacamaovdj.jpg" class="image1"/>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-lg-6 col-md-12">
+                    <img src="https://res.cloudinary.com/dmnys8vsr/image/upload/v1740217433/OTP-Authentication-e1708339772854_uzohva.png" class="image2"/>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <p class="details">To ensure the security and integrity of patient data, cutting-edge technologies like blockchain are implemented. Blockchain provides a decentralized and tamper-proof ledger, ensuring that medical records remain secure and unaltered. Encryption techniques safeguard sensitive information, while multi-factor authentication (MFA) restricts unauthorized access. Smart contracts enable seamless and transparent data sharing between healthcare providers while maintaining strict access controls. These technologies collectively enhance data privacy, prevent breaches, and ensure trust in the healthcare system.</p>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-lg-6 col-md-12">
+                    <p class="details">In addition to accessing the patient's previous medical history, the doctor can also update the system with the patient’s current medical condition. After diagnosis, the doctor can upload new prescriptions, test results, and treatment details to ensure that the patient’s records remain up to date. This allows for seamless continuity of care, enabling future consultations to be more efficient and well-informed.<p>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <img src="https://res.cloudinary.com/dmnys8vsr/image/upload/v1740238625/vector-illustration-about-file-management-concept-with-business-team-looking-files_675567-3755_cqkuwo.jpg" class="image1"/>
+                </div>
+        </div>
+    </div>
+
+    <div class="footer_bg">
+        <hr style="height:3px;border-width:0;color:white;background-color:white">
+        <div class="d-flex flex-row justify-content-around cardmargin">
+            <div>
+                <img src="https://res.cloudinary.com/dmnys8vsr/image/upload/v1739197860/WhatsApp_Image_2025-02-10_at_19.20.02_f26967f0_v3feig.jpg" class="footer_logo" />
+            </div>
+            <div class="details2">
+                <h1 class="heading4 footer_textcolor">Quick Links</h1>
+                <p class="para4 footer_textcolor">Home</p>
+                <p class="para4 footer_textcolor">Features</p>
+                <p class="para4 footer_textcolor">About Us</p>
+                <p class="para4 footer_textcolor">Contact Us</p>
+            </div>
+            <div class="details2">
+                <h1 class="heading4 footer_textcolor">Support</h1>
+                <p class="para4 footer_textcolor">Email: <a>support@mediloom.com</a></p>
+                <p class="para4 footer_textcolor">Phone No: +91 00000 00000</p>
+                <p class="para4 footer_textcolor">Address: 123, HealthCare Avenue<br>Hyderabad, 501510</p>
+            </div>
+            <div class="details2">
+                <h1 class="heading4 footer_textcolor">Follow Us</h1>
+                <p class="para4 footer_textcolor">Facebook</p>
+                <p class="para4 footer_textcolor">Twitter</p>
+                <p class="para4 footer_textcolor">Linkedin</p>
+                <p class="para4 footer_textcolor">Instagram</p>
+                <p class="para4 footer_textcolor">Youtube</p>
+            </div>
+        </div>
+        <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+        <div class="d-flex flex-row justify-content-between cardmargin">
+            <div class="d-flex flex-row">
+                <img src="https://res.cloudinary.com/dmnys8vsr/image/upload/v1738750934/icons8-copyright-24_vjvqri.png" class="image3 footer_textcolor" />
+                <p class="para4 footer_textcolor">2025 Mediloom.io . All Rights Reserved.</p>
+                <p class="para4 space footer_textcolor">Privacy Policy</p>
+                <p class="para4 space footer_textcolor">Terms of Service</p>
+                <p class="para4 space footer_textcolor">Cookie Setting</p>
+            </div>
+            <div class="d-flex flex-row">
+                <img src="https://res.cloudinary.com/dmnys8vsr/image/upload/v1738750935/icons8-facebook-24_1_vb4enq.png" class="image3" />
+                <img src="https://res.cloudinary.com/dmnys8vsr/image/upload/v1738750934/icons8-instagram-24_1_p8kdz3.png" class="image3" />
+                <img src="https://res.cloudinary.com/dmnys8vsr/image/upload/v1738750935/icons8-twitter-24_1_tlikuh.png" class="image3" />
+                <img src="https://res.cloudinary.com/dmnys8vsr/image/upload/v1738750934/icons8-linkedin-24_1_x0xoiu.png" class="image3" />
+                <img src="https://res.cloudinary.com/dmnys8vsr/image/upload/v1738750934/icons8-youtube-24_1_whc6fb.png" class="image3" />
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleForm(formId) {
+            document.getElementById('retrieveForm').classList.add('hidden');
+            document.getElementById('uploadForm').classList.add('hidden');
+            document.getElementById('dataRetrievalSection').classList.add('hidden');
+            document.getElementById(formId).classList.remove('hidden');
+        }
+
+        function downloadFile(filename) {
+            const link = document.createElement("a");
+            link.href = filename;
+            link.download = filename;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+        
+        function validateOTP(event) {
+            event.preventDefault();
+            let otp = document.getElementById('otpField').value;
+            let testOTP = 123456; // Test OTP for validation as an integer
+            if (parseInt(otp, 10) === testOTP) {
+                alert("OTP Verified! Displaying records...");
+                document.getElementById('retrieveForm').classList.add('hidden');
+                document.getElementById('dataRetrievalSection').classList.remove('hidden');
+            } else {
+                alert("Invalid OTP. Please enter a 6-digit number.");
+            }
+        }
+
+        function applyFilters() {
+            let selectedDate = document.getElementById("filterDate").value;
+            let selectedHospital = document.getElementById("filterHospital").value;
+            let documents = document.querySelectorAll(".document");
+            
+            documents.forEach(doc => {
+                let docDate = doc.getAttribute("data-date");
+                let docHospital = doc.getAttribute("data-hospital");
+                
+                let dateMatch = selectedDate ? docDate === selectedDate : true;
+                let hospitalMatch = selectedHospital ? docHospital === selectedHospital : true;
+                
+                doc.style.display = dateMatch && hospitalMatch ? "flex" : "none";
+            });
+        }
+    </script>
+</body>
+</html>
